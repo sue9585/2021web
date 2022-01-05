@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset  */
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        .clearfix:after{content: ""; display: block; clear: both;}
+
+        /* css */
+        .logo{text-align: center;
+        margin-bottom: 30px;
+        }
+
+        .nav{
+            margin: 0 auto;
+            background-color: coral;
+            width: 1200px;
+        }
+        .nav>li{
+            float: left;
+            width: 20%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <di class="logo clearfix">
+        <h1>logo</h1>
+    </di>
+
+    <ul class="nav clearfix">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+</body>
+</html>
