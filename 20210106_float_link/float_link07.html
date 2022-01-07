@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset  */
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        .clearfix:after{content: ""; display: block; clear: both;}
+        a:link,a:hover{color: black; text-decoration: none;}
+
+        /* css */
+        .box{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .box>.logo{
+            float: left;
+            background-color: blue;
+            width: 30%;
+        }
+
+        .box>.logo>h1{
+            text-align: center;
+        }
+
+        .box>.nav{
+            /* width: 1200px; */
+            margin: 0 auto;
+        }
+
+        .box>.nav>li{
+            float: right;
+            width: 10%;
+            background-color: blueviolet;
+        }
+
+        .nav>li>a{
+            display: block;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .nav>li:hover{background-color: violet;}
+
+        .nav>li>a:hover{
+            color: white;
+        }
+
+        .logo>h1:hover{background-color: tomato;}
+
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+
+        <div class="logo">
+            <h1><a href="#">LOGO</a></h1>
+        </div>
+
+        <ul class="nav clearfix">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+        </ul>
+
+
+
+
+    </div>
+</body>
+</html>
