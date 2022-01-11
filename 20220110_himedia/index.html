@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
         /* reset  */
-        *{margin: 0;padding: 0;}
+        *{margin: 0;padding: 0;box-sizing: border-box;}
         li{list-style: none;}
         a:link,a:visited{color: #000;text-decoration: none;}
         .clearfix:after{content:"";display: block;clear: both;}
@@ -45,9 +45,19 @@
 
 
         /* nav  */
-        .nav_wrapper{background-color: #1D5DA4;}
+        .nav_wrapper{background-color: #1D5DA4;
+            border-bottom: 1px solid #000;
+        }
         .nav_wrapper>.nav{width: 980px;margin: 0 auto;}
-        .nav_wrapper>.nav>li{float: left;width: 16.666%;}
+        .nav_wrapper>.nav>li{
+                float: left;width: 16.666%;
+                border-right: 1px solid #336DAC;
+                box-sizing: border-box;}
+        
+        .nav_wrapper>.nav>li:first-child{border-left: 1px solid #336DAC;}
+        /* .nav_wrapper>.nav>li:last-child{border-right: 1px solid red;} */
+        /* .nav_wrapper>.nav>li:nth-child(2){background-color: royalblue;} */
+        
         .nav_wrapper>.nav>li>a{
             display: block;text-align: center;line-height: 45px;color:white;
             font-weight: bold;
