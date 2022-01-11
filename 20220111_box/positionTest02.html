@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0; box-sizing: border-box;}
+        li{list-style: none;}
+        .clearfix:after{content: ""; display: block; clear: both;}
+        a:link,a:visited{color: black; text-decoration: none;}
+        html,body{height: 100%;}
+
+        /* css */
+        
+        .box_wrapper{
+           
+           border: 1px solid #000;
+            position: relative;
+            width: 650px;
+            height: 350px;
+            padding: 10px;
+
+            
+            
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+
+        .box1{
+            position: absolute;
+            left: 50%;
+            margin-left: -100px;
+           
+        }
+        .box2{
+            position: absolute;
+            left: 100%;
+            margin-left: -210px;
+
+            top: 50%;
+            margin-top: -50px;
+        }
+        .box3{
+            position: absolute;
+            top: 100%;
+            margin-top: -110px;
+
+            left: 50%;
+            margin-left: -100px;
+           
+        }
+        .box4{
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+          
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box_wrapper">
+        <div class="box box1">top</div>
+        <div class="box box2">right</div>
+        <div class="box box3">bottom</div>
+        <div class="box box4">left</div>
+    </div>
+</body>
+</html>
