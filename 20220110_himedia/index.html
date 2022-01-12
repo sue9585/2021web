@@ -16,6 +16,7 @@
         .clearfix:after{content:"";display: block;clear: both;}
         body{
             font-family: 'Roboto', sans-serif;
+            min-width: 980px;
         }
         
 
@@ -30,6 +31,21 @@
         }
         .util_wrapper>ul.util{float: right;}
         .util_wrapper>ul.util>li{float: left;}
+
+
+        .util_wrapper>ul.util>li:after{
+            content: "";
+            width: 1px;
+            height: 11px;
+            display: block;
+            background-color: #ccc;
+            position: absolute;
+            top: 7px;
+        }
+        
+        /* .util_wrapper>ul.util>li:first-child:after{content: ""; display: none;} */
+
+
         .util_wrapper>ul.util>li>a{display: block;font-size: 12px;padding: 6px 10px;}
 
         .wall{
@@ -63,6 +79,35 @@
             font-weight: bold;
         }
         .nav_wrapper>.nav>li>a:hover{background-color:#0d2b4d;}
+
+        .visual{
+            background-color: #213C6B;
+            background-image: url(main_bg01.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 400px;
+        }
+
+        .slide{
+            width: 980px;
+            height: 400px;
+            background-color: blue;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            /* 부모자 크기보다 넘치면 잘라줌 */
+        }
+
+        .slide .img1{
+            position: absolute;
+            top: 100px;
+        }
+        .slide .img2{
+            position: absolute;
+            right: 0;
+            
+            /* overflow: hidden;  부모자 크기보다 넘치면 잘라줌 */
+        }
 
 
         /* header end  */
@@ -100,6 +145,13 @@
         </nav>
         
      </header>
+
+     <div class="visual">
+        <div class="slide">
+            <img src="./text.png" alt="text" class="img1">
+            <img src="./main_slider_img.png" alt="#" class="img2">
+        </div>
+     </div>
   
 </body>
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+          html,body{height: 100%;}
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        li{list-style: none;}
+        a:link,a:visited{color: #000;text-decoration: none;}
+        .clearfix:after{content:"";display: block;clear: both;}
+
+        body{
+            background-image: url(../images/position02.jpg);
+            background-repeat: no-repeat;
+        }
+        .boxWrap{
+            width: 400px;
+            height: 150px;
+            _background-color: #eaeaea;
+            border: 1px solid #000;
+            margin-top: 100px;
+            position: relative;
+            /* top: 100px; */
+        }
+        .boxWrap>div{
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            background-color: #5eb1ff;
+        }
+
+        /* 우선순위 점수! */
+        .boxWrap>div.box1{
+            width: 200px;
+            top: 10px;
+            left: 10px;
+        }
+        .boxWrap>div.box2{
+            right: 10px;
+            top: 10px;
+        }
+        .boxWrap>div.box3{
+            width: 380px;
+            left: 10px;
+            bottom: 10px;
+        }
+        .testBox{
+            background-color: royalblue;
+            position: absolute;
+            /* float 처럼 크기모름 지정해줘야함 */
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            margin-top: -50px;
+            left: 50%;
+            margin-top: -50px;
+        }
+
+        .boxWrap1{
+            width: 400px;
+            height: 150px;
+            position: relative;
+            background-color: salmon;
+            padding: 10px;
+        }
+        .boxWrap1>.box1{
+            width: 200px;
+            height: 50px;
+            /* position: absolute; */
+            background-color: red;
+        }
+
+        .boxWrap1>.box2{
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            right: 10px;
+            /* ? 블록 단위 */
+            top: 10px;
+            background-color: red;
+        }
+
+        .boxWrap1>.box3{
+            /* width: 100%; */
+            width: 380px;
+            height: 50px;
+            bottom: 10px;
+            position: absolute;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+    <div class="testBox">test</div>
+
+    <div class="boxWrap1">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+</body>
+</html>
