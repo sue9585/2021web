@@ -11,20 +11,41 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script>
-        $(document).ready(function(){
-            $(".slider").bxSlider({
-                slideWidth:1200
-            });
-        });
+      $(document).ready(function(){
+          
+        $(".slider").bxSlider();
+
+        $(".slider_two").bxSlider();
+
+      });
     </script>
 </head>
 <style>
+    body{background-color: #aaa;}
     .sliderWrap{width:1200px; margin: 0 auto;}
+    .bx-wrapper {
+        -moz-box-shadow: 0 0 0 #fff;
+        -webkit-box-shadow: 0 0 0 #fff;
+        box-shadow: 0 0 0 #fff;
+        margin-bottom: 0;
+        border: none;
+        }
+    .bx-wrapper .bx-pager{
+        position: absolute;
+        bottom: 30px;
+        }
+
+    .slider_two img{
+            width: 100%;
+        }
+
+       
 </style>
 
 
 <body>
     <div class="sliderWrap">
+        
         <ul class="slider">
             <li>
                 <img src="images/pc01.jpg" alt=""> <!-- 1200*500 -->
@@ -37,5 +58,13 @@
             </li>
         </ul>
     </div>
+    
+        <ul class="slider_two">
+            <li class="slist"><img src="images/pc01.jpg" alt=""></li>
+            <li class="slist"><img src="images/pc02.jpg" alt=""></li>
+            <li class="slist"><img src="images/pc03.jpg" alt=""></li>
+        </ul>
+    
+    
 </body>
 </html>
