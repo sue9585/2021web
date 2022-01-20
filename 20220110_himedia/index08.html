@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/style02.css"> -->
+    <link rel="stylesheet" href="css/style02.css">
 
-    <style>
+    <!-- <style>
         /* reset */
 *{margin: 0;padding: 0;box-sizing: border-box;}
 li{list-style: none;}
@@ -79,6 +79,14 @@ div.wall{
     background-color: rgb(182, 151, 111);
 }
 
+.visual{
+    background-image: url(./imges/main_bg01.jpg);
+    background-color: #213C6B;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+} -->
+
 
        
     </style>
@@ -99,7 +107,9 @@ div.wall{
         <div class="wall"></div>
 
         <div class="logo_wrapper">
-            <h1 class="logo"><a href="#">하이미디어</a></h1>
+            <h1 class="logo">
+                <a href="#">하이미디어</a>
+            </h1>
         </div>
 
         <nav class="nav_wrapper">
@@ -115,7 +125,20 @@ div.wall{
     </header>
 
     <div class="visual">
-        
+       <div class="slide">
+           <img src="./imges/main_slider_img.png" class="img1" alt="#">
+           <img src="./imges/text.png" class="img2" alt="#">
+       </div>
+    </div>
+
+    <div class="banner_wrap">
+        <ul>
+            <li>
+                <img src="./imges/icon01.png" alt="#">
+                <h2>사회공헌</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ipsam!</p>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
