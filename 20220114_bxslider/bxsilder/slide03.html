@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+    <script>
+        $(document).ready(function(){
+           var myslider = $(".slider").bxSlider({
+                // pager:false,
+                controls:false,
+                pagerCustom:".boxPager",
+                // mode:"vertical",
+                auto:true
+            });
+            $(".nextBtn").click(function(){
+                myslider.goToNextSlide();
+            })
+            $(".prevBtn").click(function(){
+                myslider.goToPrevSlide();
+            })
+               
+        });
+    </script>
+
+    <style>
+        body{background-color: slategray;}
+        .sliderWrap{width: 1260px; margin: 0 auto; position: relative;}
+        .nextBtn, .prevBtn{
+            position: absolute;top:50%;
+            /* margin-top: -50px; */
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .nextBtn{right: 10px;}
+        .prevbtn{left: 10px;}
+
+        .slider .card{
+            position: absolute;
+            top: 100px;
+            right: 50px;
+        }
+        .slider .card h2{
+            font-size: 2em;color: white;
+            margin-bottom: 10px;
+        }
+        .slider .card h2:after{
+            content: "";display: block; width: 100px; height: 2px; background-color: tomato;
+            position: absolute;
+            top: -10px;
+        }
+        .slider .card p{margin-bottom: 30px;}
+        /* .slider .card a.btn{display: block;} */
+
+        a.btn{padding: 5px 20px; background-color: turquoise; display: inline-block; border-radius: 10px; font-size: 20px;}
+        a.btn.primary{ background-color: thistle !important;}
+        a.btn.secondary{background-color: crimson;}
+
+        a.btn:hover{background: blueviolet !important;}
+
+        .sliderPager{position: absolute; bottom: 0; background: palevioletred; width: 100%;}
+        .sliderPager .boxPager a{display: block; float: left; width: 25%; height: 40px; line-height: 40px; text-align: center;}
+        .sliderPager .boxPager a:hover{background-color: orangered; color: white; font-weight: bold;}
+        .sliderPager .boxPager a.active{background: violet;}
+    </style>
+</head>
+<body>
+    <div class="sliderWrap">
+        <ul class="slider">
+            <li><img src="images/main_slider01.jpg" alt="">
+            <div class="card">
+                <h2>사랑과 행복을 나누는 마음1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Necessitatibus, at!</p>
+                <a href="" class="btn primary">바로가기</a>
+                <a href="" class="btn primary">바로가기</a>
+            </div></li>
+
+            <li><img src="images/main_slider01.jpg" alt="">
+            <div class="card">
+                <h2>사랑과 행복을 나누는 마음2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Necessitatibus, at!</p>
+                <a href="" class="btn secondary">바로가기</a>
+            </div></li>
+
+            <li><img src="images/main_slider01.jpg" alt="">
+            <div class="card">
+                <h2>사랑과 행복을 나누는 마음3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Necessitatibus, at!</p>
+                <a href="" class="btn rpimary">바로가기</a>
+            </div></li>
+
+            <li><img src="images/main_slider01.jpg" alt="">
+            <div class="card">
+                <h2>사랑과 행복을 나누는 마음4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Necessitatibus, at!</p>
+                <a href="" class="btn rpimary">바로가기</a>
+            </div></li>
+
+        </ul>
+
+    
+        <div class="nextBtn">
+            <img src="images/btn_right.png" alt="">
+        </div>
+        <div class="prevBtn">
+            <img src="images/btn_left.png" alt="">
+        </div>
+        <div class="sliderPager">
+            <div class="boxPager">
+                <a href="#" data-slide-index="0">menu1</a>
+                <a href="#" data-slide-index="1">menu2</a>
+                <a href="#" data-slide-index="2">menu3</a>
+                <a href="#" data-slide-index="3">menu4</a>
+            </div>
+        
+        </div>
+    </div>
+</body>
+</html>
